@@ -97,7 +97,7 @@ if __name__ == "__main__":
     print('Press Ctrl-C in the console to break the while loop.')
 
 
-
+    seconds = 0
     try:
         # The following loop acquires data, computes band powers, and calculates neurofeedback metrics based on those band powers
         t = datetime.now()
@@ -133,7 +133,6 @@ if __name__ == "__main__":
 
 
             """ 3.3 COMPUTE NEUROFEEDBACK METRICS """
-            seconds = 0
             if  band_powers[Band.Delta] > 1 and  band_powers[Band.Theta] > 1 and band_powers[Band.Alpha] > 1 and time.time() > seconds + 1:
                 print("""
 
