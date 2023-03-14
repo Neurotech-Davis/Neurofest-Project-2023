@@ -21,6 +21,7 @@ import numpy as np  # Module that simplifies computations on matrices
 import matplotlib.pyplot as plt  # Module used for plotting
 from pylsl import StreamInlet, resolve_byprop  # Module to receive EEG data
 import utils  # Our own utility functions
+import time
 
 class Band:
     Delta = 0
@@ -132,14 +133,15 @@ if __name__ == "__main__":
 
 
             """ 3.3 COMPUTE NEUROFEEDBACK METRICS """
-
-            if  band_powers[Band.Delta] > 1 and  band_powers[Band.Theta] > 1 and band_powers[Band.Alpha] > 1:
+            seconds = 0
+            if  band_powers[Band.Delta] > 1 and  band_powers[Band.Theta] > 1 and band_powers[Band.Alpha] > 1 and time.time() > seconds + 1:
                 print("""
 
                 blink
 
                 """)
                 pyautogui.press('space')
+                seconds = time.time()
 
             # These metrics could also be used to drive brain-computer interfaces
 
