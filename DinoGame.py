@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt  # Module used for plotting
 from pylsl import StreamInlet, resolve_byprop  # Module to receive EEG data
 import utils  # Our own utility functions
 import time
+import time
 
 class Band:
     Delta = 0
@@ -94,6 +95,7 @@ if __name__ == "__main__":
     print('Press Ctrl-C in the console to break the while loop.')
 
 
+    seconds = 0
     seconds = 0
     try:
         # The following loop acquires data, computes band powers, and calculates neurofeedback metrics based on those band powers
