@@ -23,7 +23,7 @@ import time
 
 class Band:
     Delta = 0
-    Theta = 1
+    Theta = 1     
     Alpha = 2
     Beta = 3
 
@@ -138,6 +138,7 @@ if __name__ == "__main__":
                 """)
                 pydirectinput.press('space')
                 seconds = time.time()
+
 
             # These metrics could also be used to drive brain-computer interfaces
 

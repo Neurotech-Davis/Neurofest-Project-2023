@@ -115,7 +115,7 @@ def extractDigits(num):
 
 class Dino():
     def __init__(self, sx=-1, sy=-1):
-        self.imgs, self.rect = load_sprite_sheet('mario spritesheet.png', 5, 1, sx, sy, -1)
+        self.imgs, self.rect = load_sprite_sheet('New Piskel (1).png', 5, 1, sx, sy, -1)
         self.imgs1, self.rect1 = load_sprite_sheet('dino_ducking.png', 2, 1, 59, sy, -1)
         self.rect.bottom = int(0.98 * height_screen)
         self.rect.left = width_screen / 15
@@ -128,7 +128,7 @@ class Dino():
         self.ducking = False
         self.blinking = False
         self.movement = [0,0]
-        self.jumpSpeed = 15.5
+        self.jumpSpeed = 17
 
         self.stand_position_width = self.rect.width
         self.duck_position_width = self.rect1.width
@@ -304,9 +304,9 @@ def introduction_screen():
     t_ground_rect.left = width_screen / 20
     t_ground_rect.bottom = height_screen
 
-    logo,l_rect = load_image('logo.png',300,140,-1)
-    l_rect.centerx = width_screen * 0.6
-    l_rect.centery = height_screen * 0.6
+    logo,l_rect = load_image('logo.png',1000, 500,-1)
+    l_rect.centerx = width_screen * 0.5
+    l_rect.centery = height_screen * 0.5
     while not starting_game:
         if pygame.display.get_surface() == None:
             print("Couldn't load display surface")
